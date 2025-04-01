@@ -38,12 +38,12 @@
     "clean": "rm -rf dist public node_modules package-lock.json"
   },
   "peerDependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "^18.0.0 || ^19.1.0",
+    "react-dom": "^18.0.0 || ^19.1.0"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "pdfjs-dist": "^4.4.168"
+    "pdfjs-dist": "^5.1.91"
   },
   "repository": {
     "type": "git",
