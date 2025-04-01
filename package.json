@@ -1,19 +1,11 @@
 {
-  "name": "react-pdf-highlighter-extended",
+  "name": "react-pdf-highlighter-extended-extended",
   "type": "module",
-  "version": "8.1.0",
-  "description": "Set of modern React components for PDF highlighting",
-  "author": "Daniel Arnould <daniel.s.arnould@gmail.com>",
+  "version": "1.0.0",
+  "description": "React component for highlighting PDFs",
+  "author": "Alyssa van Gorkom",
   "license": "MIT",
   "contributors": [
-    {
-      "name": "Daniel Arnould",
-      "email": "daniel.s.arnould@gmail.com"
-    },
-    {
-      "name": "Artem Tyurin",
-      "email": "artem.tyurin@gmail.com"
-    },
     {
       "name": "Alyssa van Gorkom",
       "email": "alyssajvangorkom@gmail.com"
@@ -27,7 +19,8 @@
     "react"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "types": "./dist/esm/index.d.ts",
   "module": "./dist/esm/index.js",
