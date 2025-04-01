@@ -1,5 +1,6 @@
 import React, { ReactNode, useRef } from "react";
 import { usePdfHighlighterContext } from "../contexts/PdfHighlighterContext";
+import { ViewportPosition } from "../types";
 import { Tip } from "../types";
 import { MouseMonitor } from "./MouseMonitor";
 
@@ -69,12 +70,10 @@ export const MonitoredHighlightContainer = ({
                 if (mouseInRef.current) {
                   return;
                 }
-
-                setTip(null);
                 onMouseLeave && onMouseLeave();
               }}
-              paddingX={60}
-              paddingY={30}
+              paddingX={6}
+              paddingY={6}
             >
               {highlightTip.content}
             </MouseMonitor>
