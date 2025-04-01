@@ -44,10 +44,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielArnould/react-pdf-highlighter.git"
+    "url": "git+https://github.com/alyssavangorkom/react-pdf-highlighter-extended-extended.git"
   },
   "bugs": {
-    "url": "https://github.com/DanielArnould/react-pdf-highlighter-extended/issues"
+    "url": "https://github.com/alyssavangorkom/react-pdf-highlighter-extended-extended/issues"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.9",
