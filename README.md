@@ -11,25 +11,6 @@ This originally started as a fork of [`react-pdf-highlighter`](https://github.co
 I made small changes to react-pdf-highlighter-extended to make it work better for my project. Now it is `react pdf highlighter extended extended`! Fixed some old bugs.
 I upgraded react to react 19 so that it is compatible with other plugins for my app.  In order to do this the ability to resize highlights must be removed or upgraded as well (but I am not using them anyways, so I just deleted them).  I also made highlight tooltips persist until another one is hovered to be more compatible with a lot of busy highlights.
 
-## Table of Contents
-
-- [Documentation](#documentation)
-- [Example](#example)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [PdfLoader](#pdfloader)
-    - [Example loading document with `string`](#example-loading-document-with-string)
-    - [Example loading document with `DocumentInitParameters`](#example-loading-document-with-documentinitparameters)
-  - [PdfHighlighter](#pdfhighlighter)
-    - [Example](#example-1)
-  - [User-defined HighlightContainer](#user-defined-highlightcontainer)
-    - [Example](#example-2)
-    - [Example with categories and custom highlights](#example-with-categories-and-custom-highlights)
-    - [Example with comments and `MonitoredHighlightContainer`](#example-with-comments-and-monitoredhighlightcontainer)
-  - [Tips](#tips)
-    - [Example](#example-3)
-- [Contribute](#contribute)
-
 ## Documentation
 
 Find documentation for the original library that this is forked from here:
