@@ -1,6 +1,5 @@
 import React, { ReactNode, useRef } from "react";
 import { usePdfHighlighterContext } from "../contexts/PdfHighlighterContext";
-import { ViewportPosition } from "../types";
 import { Tip } from "../types";
 import { MouseMonitor } from "./MouseMonitor";
 

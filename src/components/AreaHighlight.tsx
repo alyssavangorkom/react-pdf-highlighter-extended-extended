@@ -1,4 +1,4 @@
-import React, { CSSProperties, MouseEvent, useRef } from "react";
+import React, { CSSProperties, useRef } from "react";
 import "../style/AreaHighlight.css";
 import type { ViewportHighlight } from "../types";
 
