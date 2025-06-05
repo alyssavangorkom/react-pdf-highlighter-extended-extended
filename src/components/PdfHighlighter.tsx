@@ -240,22 +240,29 @@ export const PdfHighlighter = ({
     if (!pdfDocument) return;
 
     const debouncedDocumentInit = debounce(() => {
-      viewerRef.current =
-        viewerRef.current ||
-        new PDFViewer({
-          container: containerNodeRef.current!,
-          eventBus: eventBusRef.current,
-          textLayerMode: 2,
-          removePageBorders: true,
-          linkService: linkServiceRef.current,
-          annotationMode: 2,
-          annotationEditorMode: 0,
-        });
+      try {
+        viewerRef.current =
+          viewerRef.current ||
+          new PDFViewer({
+            container: containerNodeRef.current!,
+            eventBus: eventBusRef.current,
+            textLayerMode: 2,
+            removePageBorders: true,
+            linkService: linkServiceRef.current,
+            annotationMode: 0,
+            annotationEditorMode: 0,
+          });
 
-      viewerRef.current?.setDocument(pdfDocument);
-      linkServiceRef.current.setDocument(pdfDocument);
-      linkServiceRef.current.setViewer(viewerRef.current);
-      setIsViewerReady(true);
+        viewerRef.current?.setDocument(pdfDocument);
+        linkServiceRef.current.setDocument(pdfDocument);
+        linkServiceRef.current.setViewer(viewerRef.current);
+        setIsViewerReady(true);
+      } catch (error) {
+        console.error(
+          "An error occured while initializing the PDF Viewer.",
+          error
+        );
+      }
     }, 100);
 
     debouncedDocumentInit();
