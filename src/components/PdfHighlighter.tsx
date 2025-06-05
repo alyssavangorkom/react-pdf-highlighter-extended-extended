@@ -231,6 +231,7 @@ export const PdfHighlighter = ({
   // Initialise PDF Viewer
   useLayoutEffect(() => {
     if (!containerNodeRef.current) return;
+    if (!pdfDocument) return;
 
     const debouncedDocumentInit = debounce(() => {
       viewerRef.current =
@@ -245,7 +246,7 @@ export const PdfHighlighter = ({
           annotationEditorMode: 0,
         });
 
-      viewerRef.current.setDocument(pdfDocument);
+      viewerRef.current?.setDocument(pdfDocument);
       linkServiceRef.current.setDocument(pdfDocument);
       linkServiceRef.current.setViewer(viewerRef.current);
       setIsViewerReady(true);
@@ -368,7 +369,7 @@ export const PdfHighlighter = ({
   };
 
   const handleScaleValue = () => {
-    if (viewerRef.current) {
+    if (viewerRef.current && pdfScaleValue && pdfScaleValue.toString()) {
       viewerRef.current.currentScaleValue = pdfScaleValue.toString();
     }
   };
