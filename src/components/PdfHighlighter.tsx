@@ -54,10 +54,16 @@ let EventBus: typeof TEventBus,
 
 (async () => {
   // Due to breaking changes in PDF.js 4.0.189. See issue #17228
-  const pdfjs = await import("pdfjs-dist/web/pdf_viewer.mjs");
-  EventBus = pdfjs.EventBus;
-  PDFLinkService = pdfjs.PDFLinkService;
-  PDFViewer = pdfjs.PDFViewer;
+  try {
+    const pdfjs = await import("pdfjs-dist/web/pdf_viewer.mjs");
+    if (!pdfjs)
+      throw new Error(`PDFJS Import Failed. ${Object.keys(pdfjs).toString()}`);
+    EventBus = pdfjs.EventBus;
+    PDFLinkService = pdfjs.PDFLinkService;
+    PDFViewer = pdfjs.PDFViewer;
+  } catch (error) {
+    console.error("Failed to load PDFJS", error);
+  }
 })();
 
 const SCROLL_MARGIN = 10;

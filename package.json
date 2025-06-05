@@ -1,7 +1,7 @@
 {
   "name": "react-pdf-highlighter-extended-extended",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component for highlighting PDFs",
   "author": "Alyssa van Gorkom",
   "license": "MIT",
