@@ -239,7 +239,16 @@ export const PdfHighlighter = ({
     if (!containerNodeRef.current) return;
     if (!pdfDocument) return;
 
+    let cancelled = false;
+
     const debouncedDocumentInit = debounce(() => {
+      if (
+        cancelled ||
+        !pdfDocument ||
+        !containerNodeRef.current ||
+        !viewerRef.current
+      )
+        return;
       try {
         viewerRef.current =
           viewerRef.current ||
@@ -253,7 +262,7 @@ export const PdfHighlighter = ({
             annotationEditorMode: 0,
           });
 
-        viewerRef.current?.setDocument(pdfDocument);
+        viewerRef.current.setDocument(pdfDocument);
         linkServiceRef.current.setDocument(pdfDocument);
         linkServiceRef.current.setViewer(viewerRef.current);
         setIsViewerReady(true);
@@ -268,6 +277,7 @@ export const PdfHighlighter = ({
     debouncedDocumentInit();
 
     return () => {
+      cancelled = true;
       debouncedDocumentInit.cancel();
     };
   }, [document]);
