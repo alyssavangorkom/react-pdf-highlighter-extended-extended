@@ -27,7 +27,7 @@ const DEFAULT_ON_ERROR = (error: Error) => {
 };
 
 const DEFAULT_WORKER_SRC =
-  "https://unpkg.com/pdfjs-dist@5.1.91/build/pdf.worker.min.mjs";
+  "https://unpkg.com/pdfjs-dist@5.3.31/build/pdf.worker.min.mjs";
 
 /**
  * The props type for {@link PdfLoader}.
