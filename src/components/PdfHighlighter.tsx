@@ -239,8 +239,6 @@ export const PdfHighlighter = ({
     if (!containerNodeRef.current) return;
     if (!pdfDocument) return;
 
-    let cancelled = false;
-
     const debouncedDocumentInit = debounce(() => {
       try {
         viewerRef.current =
@@ -270,7 +268,6 @@ export const PdfHighlighter = ({
     debouncedDocumentInit();
 
     return () => {
-      cancelled = true;
       debouncedDocumentInit.cancel();
     };
   }, [document]);
