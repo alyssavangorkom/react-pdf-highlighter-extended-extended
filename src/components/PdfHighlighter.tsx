@@ -242,13 +242,6 @@ export const PdfHighlighter = ({
     let cancelled = false;
 
     const debouncedDocumentInit = debounce(() => {
-      if (
-        cancelled ||
-        !pdfDocument ||
-        !containerNodeRef.current ||
-        !viewerRef.current
-      )
-        return;
       try {
         viewerRef.current =
           viewerRef.current ||
