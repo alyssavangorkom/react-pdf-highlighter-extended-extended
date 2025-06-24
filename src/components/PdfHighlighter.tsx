@@ -391,13 +391,6 @@ export const PdfHighlighter = ({
     }
   };
 
-  const isVisible = (element: HTMLElement) =>
-    !!(
-      element.offsetWidth ||
-      element.offsetHeight ||
-      element.getClientRects().length
-    );
-
   const handleScaleValue = () => {
     if (
       viewerRef.current &&
