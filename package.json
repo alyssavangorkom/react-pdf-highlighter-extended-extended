@@ -1,7 +1,7 @@
 {
   "name": "react-pdf-highlighter-extended-extended",
   "type": "module",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "description": "React component for highlighting PDFs",
   "author": "Alyssa van Gorkom",
   "license": "MIT",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
-    "pdfjs-dist": "^5.1.91"
+    "pdfjs-dist": "^5.3.31"
   },
   "repository": {
     "type": "git",
